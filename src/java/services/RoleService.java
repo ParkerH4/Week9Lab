@@ -14,6 +14,7 @@ import models.Role;
  * @author awarsyle
  */
 public class RoleService {
+    
     public Role get(int roleID) throws Exception {
         RoleDB roleDB = new RoleDB();
         Role role = roleDB.getRole(roleID);
@@ -22,6 +23,7 @@ public class RoleService {
     
     public List<Role> getAll() throws Exception {
         RoleDB roleDB = new RoleDB();
-        return roleDB.getAll();
+        List<Role> roles = roleDB.getAllRole();
+        return roles;
     }
 }
